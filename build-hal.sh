@@ -11,7 +11,9 @@ make -j$(nproc) mkbootimg
 make -j$(nproc) fec
 make -j$(nproc) halium-boot
 make -j$(nproc) systemimage 
+make -j$(nproc) vendorimage 
 
-echo "md5sum halium-boot.img and system.img"
+echo "md5sum halium-boot.img, system.img and vendor.img"
 md5sum $ANDROID_ROOT/out/target/product/clover/halium-boot.img
 md5sum $ANDROID_ROOT/out/target/product/clover/system.img
+md5sum $ANDROID_ROOT/out/target/product/clover/vendor.img
