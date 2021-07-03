@@ -85,3 +85,9 @@ jobs:
       with:
         name: System image
         path: /home/runner/work/halium/out/target/product/clover/system.img
+        
+    - name : Upload vendor image
+      uses: actions/upload-artifact@master
+      with:
+        name: Vendor image
+        path: /home/runner/work/halium/out/target/product/clover/vendor.img
